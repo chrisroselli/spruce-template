@@ -94,7 +94,8 @@ strong {
     padding: 0px 20px;
 }
 
-.home h2 {
+.home h2,
+.home p.home-section-title {
     font: bold 28px/1.3em sans-serif;
     text-transform: uppercase;
     color: #353535;
