@@ -435,19 +435,21 @@
 
                   <?php if (($thePage != "service-area")) { ?>
 
-                  <div class="container home" id="service-area">
-                      <div class="row">
-                          <div class="large-5 columns">
-                              <div id="home-city-list">
-                                  <h2>our service area</h2>
-                                  [[city_scroll:100]]
-                              </div>
-                          </div>
-                          <div class="large-7 columns service-map">
-                              <div id="gmap-wrap" onclick="location.href='/service-area.html';" style="cursor:pointer;">[[service_area_google_map]]</div>
-                          </div>
-                      </div>
-                  </div><!-- end #service-area -->
+                       <div class="container home" id="service-area">
+                                                        <div class="container home" id="home-city-list-wrap">
+                                                            <div class="row small-collapse large-uncollapse">
+                                                                <div class="large-3 columns">
+                                                                    <div id="home-city-list">
+                                                                        <p class="home-section-title">our service area</p>
+                                                                        [[city_scroll:100]]
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="container home" id="service-map">
+                                                                <div id="gmap-wrap">[[service_area_google_map]]</div>
+                                                        </div>
+                                                    </div><!-- end #service-area -->
 
                   <?php
                   }
