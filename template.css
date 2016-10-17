@@ -25,20 +25,6 @@ a,
 a:visited {
     color: #222;
 }
-a#scrollToTop {
-    display: none;
-    position: fixed;
-    right: 30px;
-    bottom: 30px;
-    background: rgba(0, 0, 0, .25);
-    border-radius: 5px;
-    padding: 10px 15px;
-    color: #fff;
-    font-size: 20px;
-}
-a#scrollToTop .fa {
-    margin-right: 10px;
-}
 a:hover {
   color: <%= primaryDarkColor %>;
 }
@@ -66,22 +52,14 @@ strong {
     margin-bottom: 20px;
     line-height: 1.2;
 }
-@media screen and (max-width: 640px) {
-    #content-wrap h1 {
-        font-size: 28px;
-        margin-bottom: 20px;
-    }
-}
 #content-wrap h2 {
     font-size: 24px !important;
-    color: ;
     margin: 0px auto 20px;
     font-weight: bold;
 }
 #content-wrap h3,
 .related_pages .title {
     font-size: 20px;
-    color: #000;
     margin-bottom: 15px;
 }
 #content-wrap h4 {
@@ -98,7 +76,7 @@ strong {
 .home p.home-section-title {
     font: bold 28px/1.3em sans-serif;
     text-transform: uppercase;
-    color: #353535;
+    color: <%= primaryDarkColor %>;
     text-align: center;
     margin-bottom: 30px;
 }
@@ -109,7 +87,18 @@ strong {
     font-size: 14px;
     line-height: 20px;
 }
-
+@media screen and (max-width: 640px) {
+    h1, p.home-section-title {
+        font-size: 22px;
+        margin-bottom: 20px;
+    }
+    h2 {
+        font-size: 18px;
+    }
+    h3, h4 {
+        font-size: 16px;
+    }
+}
 
 /**------------------------------------------- Header -------------------------------------------*/
 
@@ -174,7 +163,7 @@ strong {
     margin: -5px 10px 0px 0px;
 }
 .opensign span {
-    font: 400 16px/100% 'Roboto', sans-serif;
+    font: 400 16px/100% sans-serif;
     text-transform: uppercase;
     padding: 8px 10px;
     display: block;
@@ -300,8 +289,6 @@ ul#top-nav-list ul.m-menu ul a:hover {
 /* Sticky Logo */
 #logo-sticky a {
   background-image: url('<%- logo %>');
-  height: 50px;
-  width: 100%;
 }
 /*----------------------------------------- Main Message ---------------------------------- */
 #main-message {
@@ -350,7 +337,7 @@ ul#top-nav-list ul.m-menu ul a:hover {
 .cta-button {
   background-color: <%= primaryBrightColor %>;
   text-transform: uppercase;
-  padding: 22px 20px 19px 20px;
+  padding: 1rem 2rem 1.0625rem 2rem;
   color: #fff;
   font-size: 20px;
   font-weight: bold;
@@ -366,13 +353,9 @@ ul#top-nav-list ul.m-menu ul a:hover {
   color: #fff;
 }
 @media screen and (max-width: 640px){
-    .main-message {
+    #main-message {
       height: 350px;
       background-attachment: scroll;
-    }
-    #main-message {
-      background-attachment: inherit;
-      background-size: initial;
     }
     .hero-txt p {
       font-size: 20px;
@@ -380,19 +363,9 @@ ul#top-nav-list ul.m-menu ul a:hover {
     .hero-txt span {
       font-size: 44px;
     }
-    .btn {
-      font-size: 18px;
-      padding: 10px 20px;
-    }
     .cta-button {
       font-size: 16px;
     }
-}
-@media screen and (max-width: 981px){
-  #main-message {
-    background-attachment: initial;
-    background-size: initial;
-  }
 }
 
 /***------------------------------------------- Homepage Services -------------------------------------------***/
@@ -545,7 +518,6 @@ p.more-assets a:hover {
 #widget-slider .widget-item h3,
 #widget-slider .widget-item p {
     margin: 20px 15px 0px;
-    color: ;
     display: inline-block;
 }
 #widget-slider .widget-item .widget-img {
@@ -788,7 +760,7 @@ button.slick-next {
     text-align: center;
 }
 #customers .review_item .review_preview a {
-    color: #156441;
+    color: <%= primaryDarkColor %>;
 }
 
 
@@ -826,13 +798,34 @@ button.slick-next {
     top: 50%;
     left: 50%;
 }
+#cred img,
+.grayscale {
+    /* For IE 6 - 9 */
+    filter: gray;
+    
+    /* Firefox 10+, Firefox on Android */
+    filter: url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'grayscale\'><feColorMatrix type=\'matrix\' values=\'0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0\'/></filter></svg>#grayscale");
+    
+    /* For Webkit browsers */
+    -webkit-filter: grayscale(100%);
+    filter: grayscale(100%);
+    
+}
+/* Color Version */
+
+.grayscale:hover {
+    filter: url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'grayscale\'><feColorMatrix type=\'matrix\' values=\'1 0 0 0 0, 0 1 0 0 0, 0 0 1 0 0, 0 0 0 1 0\'/></filter></svg>#grayscale");
+    -webkit-filter: grayscale(0%);
+    filter: grayscale(0%);
+}
+
 /***------------ Service Area ------------***/
 
 #service-area {
     position: relative;
     height: 450px;
     overflow: hidden;
-    border-top: 5px solid rgb(180,180,180);
+    border-top: 5px solid <%= primaryBrightColor %>;
     box-sizing: content-box;
 }
 
@@ -854,21 +847,19 @@ button.slick-next {
     color: #fff;
 }
 
-/* Geo City List - new token */
+/* City List */
 #service-area #home-city-list-wrap {
     position: absolute;
     z-index: 1;
     background: transparent;
     width: 100%;
 }
-#service-area #home-city-list-wrap .row {
-    max-width: 90rem;
-}
+
 #home-city-list {
     height: 450px;
-    background: rgb(180,180,180);
+    background: <%= primaryBrightColor %>;
     position: relative;
-    padding: 20px 30px;
+    padding: 30px 20px;
     box-sizing: border-box;
     pointer-events: visible;
 }
@@ -876,15 +867,7 @@ button.slick-next {
 .city_scroll_list_container {
     position: relative;
 }
-.city_scroll_list_container::after {
-    content: "";
-    display: block;
-    height: 50px;
-    width: 100%;
-    background: linear-gradient(to top,rgba(180,180,180,1),rgba(180,180,180,0)); /*creates the fade at bottom of city list */
-    top: 200px;
-    position: absolute;
-}
+
 #home-city-list h3 {
     color: #353535;
     font: 500 18px sans-serif;
@@ -900,7 +883,7 @@ button.slick-next {
     border-bottom: 1px dotted rgba(255,255,255,1);
 }
 .city_scroll_list_content {
-    height: 250px;
+    height: 300px;
     overflow-y: scroll;
     padding-bottom: 50px;
 }
@@ -909,7 +892,6 @@ button.slick-next {
     margin: 0px;
     line-height: 1.3em;
     overflow: auto;
-    border-bottom: 1px solid rgba(0,0,0,.1);
 }
 
 .city_scroll_list_title {
@@ -925,9 +907,7 @@ button.slick-next {
     font: 200 16px/16px sans-serif;
     color: #353535;
     display: block;
-    float: left;
-    width: 50%;
-    padding: 12px 0;
+    padding: 15px 0;
     margin: 0;
     border-bottom: 1px solid rgba(0,0,0,.1);
 }
@@ -953,11 +933,6 @@ button.slick-next {
     margin: 0px 0px 30px 30px;
     float: right;
 }
-@media screen and (min-width: 641px) and (max-width: 1024px){
-    .city_scroll_list li {
-        width: 25%;
-    }
-}
 @media screen and (max-width: 1024px) {
     #service-area {
         height: auto;
@@ -969,82 +944,18 @@ button.slick-next {
         pointer-events: none;
     }
 }
-@media screen and (max-width: 640px) {
-    /* Service Area Page Map */
-    #content-wrap #gmap-wrap {
-        margin: 30px auto;
-        float: none;
-        width: 100%;
-        height: 350px;
+@media screen and (min-width: 641px) and (max-width: 1024px){
+    #home-city-list {
+        padding: 30px 20px 60px;
+        height: auto;
     }
-}
-
-/* Geo City List - new token */
-
-#service-area #home-city-list {
-    position: relative;
-    padding-bottom: 30px;
-}
-#home-city-list h3 {
-    color: #4c4c4c;
-    font: bold 20px sans-serif;
-}
-#home-city-list h3 a,
-.city_scroll_list a {
-    color: <%= primaryBrightColor %>;
-    text-decoration: underline;
-}
-.city_scroll_list_content {
-    height: 300px;
-    overflow-y: scroll;
-    margin-bottom: 20px;
-}
-.city_scroll_list {
-    list-style: none;
-    margin: 0px 20px 10px 0px;
-    line-height: 1.3em;
-}
-.city_scroll_list_title {
-    color: #4c4c4c;
-    margin-top: 15px;
-}
-.city_scroll_list_title:first-of-type {
-    margin-top: 0px;
-}
-.city_scroll_list li {
-    font: 14px/1.2em sans-serif;
-    color: <%= primaryDarkColor %>;
-    display: inline-block;
-}
-.city_scroll_list li:not(:last-of-type)::after {
-    content: ",";
-    margin-right: 3px;
-}
-.city_scroll_list_local_phone {
-    color: #999;
-    font-size: 12px;
-}
-#service-area .service-map {
-    background: url('/core/images/templates/des/usa-bg-light.png') no-repeat center;
-    background-size: contain;
-}
-.service-map img {
-    display: block;
-    margin: 0px auto;
-}
-#gmap-wrap {
-    width: 350px;
-    height: 350px;
-    margin: 30px auto;
-}
-#service-area #gmap-wrap > div {
-    border-radius: 50%;
-    box-shadow: 0px 15px 20px rgba(0, 0, 0, .25);
-}
-@media screen and (max-width: 1024px) {
-    #service-area .widget_map img {
-        margin: 0px auto;
-        float: none;
+    .city_scroll_list_content {
+        height: 110px;
+    }
+    .city_scroll_list {
+        -webkit-column-count: 3;
+        -moz-column-count: 3;
+        column-count: 3;
     }
 }
 @media screen and (max-width: 640px) {
@@ -1055,11 +966,8 @@ button.slick-next {
         width: 100%;
         height: 350px;
     }
-    #service-area #gmap-wrap {
-        width:275px;
-        height: 275px;
-    }
 }
+	
 /**** Homepage content Media Queries ***/
 
 @media screen and (min-width: 1025px) {
@@ -1070,14 +978,12 @@ button.slick-next {
 }
 @media screen and (max-width: 1024px) {
     #home-vid,
-    #home-reviews,
-    #home-city-list {
+    #home-reviews {
         padding-left: 10px;
         padding-right: 10px;
     }
     #customers #home-vid,
-    #customers #home-reviews,
-    #service-area #home-city-list {
+    #customers #home-reviews {
         margin-bottom: 30px;
     }
 }
@@ -1176,8 +1082,6 @@ button.slick-next {
 #subnav-left {
     position: relative;
     padding: 50px 20px 30px 20px;
-    background: linear-gradient(-90deg, rgb(234, 232, 232)0px, rgb(248, 248, 248) 15px);
-    border-right: 1px solid rgb(230, 230, 230);
 }
 @media screen and (max-width: 640px) {
     #subnav-left {
@@ -1205,6 +1109,7 @@ button.slick-next {
     display: block;
 }
 #subnav-left ul li a:hover {
+    text-decoration: underline;
 }
 /* Top silo page link styles */
 
@@ -1297,6 +1202,16 @@ button.slick-next {
 
 .silo-page-wrap {}
 #page-wrap {}
+@media screen and (min-width: 641px){
+    #page-wrap > .row::before {
+        content: "";
+        position: absolute;
+        display: block;
+        background-image: linear-gradient(to left,rgb(230, 230, 230) 1px, rgb(234, 232, 232)1px, rgb(248, 248, 248) 15px);
+        height: 100%;
+        width: 24.9%;
+    }
+}
 @media screen and (max-width: 640px) {
     #page-wrap {
         padding: 20px 0 0;
@@ -1377,9 +1292,7 @@ a.arrow-button {
 .border > h3 {
     margin: 20px;
 }
-table.table.table-2-cell.drainage-systems strong {
-    display: block;
-}
+
 
 /* Tabbed interface */
 
