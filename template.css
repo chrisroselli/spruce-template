@@ -404,45 +404,34 @@ ul#top-nav-list ul.m-menu ul a:hover {
 .service-item {
     text-align: center;
     position: relative;
-}
-.service-item h2 {
-    font-size: 24px;
-    margin-top: 10px;
-    margin-bottom: 0;
-    color: <%= primaryBrightColor %>;
+    margin-bottom: 20px;
 }
 .service-item p {
-    font-size: 18px;
-    line-height: 24px;
+    margin-bottom: 0px;
 }
-.service-icons {
-  background-color: #efefef;
-  padding: 40px 0px 10px 0;
-  border-radius: 10px;
+.service-item p.service-title {
+    font-size: 24px;
+    margin: 10px auto;
+    color: <%= primaryBrightColor %>;
 }
-.service-icons a img {
+.service-items a img {
     border: solid 4px #fefefe;
     transition: box-shadow 200ms ease-out;
 }
-.service-icons a img:hover {
+.service-items a img:hover {
     box-shadow: 0 0px 0px 5px <%= primaryBrightColor %>;
 }
 @media screen and (max-width: 640px){
     #services {
         padding: 30px 0px;
     }
-    .service-item h2 {
+    .service-item p:not(.service-title) {
+        display: none;
+    }
+    .service-item p.service-title {
         font-size: 16px;
         margin-bottom: 0px;
     }
-    .service-item p {
-         display: none;
-    }
-}
-@media screen and (max-width: 768px){
-  .service-icons {
-    background-color: #fff;
-  }
 }
 /***--------------------------------------- Why Choose Us -------------------------------------***/
 
@@ -541,7 +530,6 @@ p.more-assets a:hover {
     text-decoration: underline !important;
 }
 
-
 /***--------------------------------------- Homepage Widget Content ------------------------------------------***/
 
 #widgets {
@@ -594,7 +582,7 @@ p.more-assets a:hover {
     content: "";
     display: block;
     border-bottom: 10px solid transparent;
-    border-right: 10px solid #333;
+    border-right: 10px solid #222;
     position: absolute;
     left: 0;
     bottom: -10px;
@@ -605,7 +593,7 @@ button.slick-arrow {
     background: transparent;
     height: 50px;
     width: 50px;
-    border-color: rgba(255, 255, 255, .5);
+    border-color: rgba(150, 150, 150, .5);
     border-style: solid;
     padding: 0px;
     position: absolute;
@@ -618,7 +606,7 @@ button.slick-arrow {
     outline: none;
 }
 button.slick-arrow:hover {
-    border-color: rgba(255, 255, 255, .85);
+    border-color: rgba(150, 150, 150, .85);
 }
 button.slick-prev {
     left: -30px;
