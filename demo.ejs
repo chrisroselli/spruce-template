@@ -435,21 +435,39 @@
 
                   <?php if (($thePage != "service-area")) { ?>
 
-                       <div class="container home" id="service-area">
-                                                        <div class="container home" id="home-city-list-wrap">
-                                                            <div class="row small-collapse large-uncollapse">
-                                                                <div class="large-3 columns">
-                                                                    <div id="home-city-list">
-                                                                        <p class="home-section-title">our service area</p>
-                                                                        [[city_scroll:100]]
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                        <div class="container home" id="service-map">
-                                                                <div id="gmap-wrap">[[service_area_google_map]]</div>
-                                                        </div>
-                                                    </div><!-- end #service-area -->
+                    <div class="container home" id="service-area">
+                        <div class="container home" id="home-city-list-wrap">
+                            <div class="row small-collapse large-uncollapse">
+                                <div class="large-3 columns">
+                                    <div id="home-city-list">
+                                        <p class="home-section-title">our service area</p>
+                                        <div class="city_scroll_list_container">
+                                            <div class="city_scroll_list_content">	
+                                                <ul class="city_scroll_list">
+                                                    <li><a href="#">City 1</a></li>
+                                                    <li><a href="#">City 2</a></li>
+                                                    <li><a href="#">City 3</a></li>
+                                                    <li><a href="#">City 4</a></li>
+                                                    <li><a href="#">City 5</a></li>
+                                                    <li><a href="#">City 6</a></li>
+                                                </ul>
+                                                <span class="city_scroll_list_local_phone">
+                                                    Our Locations:<br>
+                                                    [[display_addresses_phone]]
+                                                </span>
+                                            </div>
+                                            <div class="city_scroll_list_footer">
+                                                <p class="more-assets"><a href="/service-area.html">More Cities</a></p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="container home" id="service-map">
+                                <div id="gmap-wrap">[[service_area_google_map]]</div>
+                        </div>
+                    </div><!-- end #service-area -->
 
                   <?php
                   }
