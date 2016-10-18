@@ -1195,7 +1195,7 @@ button.slick-next {
 
 /* Hide subnav on free estimate page */
 
-.homepage-content + #subnav-left, .free-estimate + #subnav-left {
+.homepage-content + #subnav-left, .full-width + #subnav-left {
     display: none;
 }
 /***------------------------------------------- Content -------------------------------------------***/
