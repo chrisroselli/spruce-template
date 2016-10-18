@@ -247,12 +247,12 @@
 
                   <?php
                   }
-                  elseif (stristr($thePage,"free-estimate"))
+                  elseif ((stristr($thePage,"free-estimate")) || ($isCityPage == true))
                   {
                   ?>
                   <div class="container" id="page-wrap">
                       <div class="row">
-                          <div class="columns free-estimate" id="content-wrap">
+                          <div class="columns full-width" id="content-wrap">
 
                   <?php
                   }
