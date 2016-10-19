@@ -1250,17 +1250,7 @@ button.slick-next {
     margin: 0px 0px 30px 30px;
     float: right;
 }
-.inline-block {
-    /* Use this class for UL or OLs that get misaligned */
 
-    display: inline-block;
-}
-.display-table {
-    /* Use this class to center widgets and other misaligned block elements */
-
-    display: table;
-    margin: 20px auto !important;
-}
 a.button,
 a.arrow-button {
     background: <%= primaryBrightColor %>;
@@ -1307,6 +1297,14 @@ a.arrow-button {
     margin: 20px;
 }
 
+/* Contact Form Colors */
+.contact_form .step.current .title {
+     background-color: <%= primaryDarkColor %>;
+}
+
+.contact_form button, input[type="submit"] {
+     background-color: <%= primaryBrightColor %>;
+}
 
 /* Tabbed interface */
 
