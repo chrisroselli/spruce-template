@@ -1207,11 +1207,6 @@ button.slick-next {
     padding-top: 5px;
 }
 
-/* Hide subnav on free estimate page */
-
-.homepage-content + #subnav-left, .full-width + #subnav-left {
-    display: none;
-}
 /***------------------------------------------- Content -------------------------------------------***/
 
 .silo-page-wrap {}
