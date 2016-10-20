@@ -301,12 +301,13 @@ ul#top-nav-list ul.m-menu ul a:hover {
 #main-message {
 	background-image:url('<%- mainMessageImage %>');
   width: 100%;
-  background-size: 100%;
+  background-size: cover;
   background-position: center 0;
   text-align: center;
   border-top: 4px solid <%= primaryBrightColor %>;
   border-bottom: 5px solid <%= primaryDarkColor %>;
   background-attachment: fixed;
+  background-repeat: no-repeat;
   overflow: hidden;
 }
 #main-message > .row {
