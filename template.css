@@ -654,13 +654,13 @@ button.slick-next {
     content: '\2022';
     text-align: center;
     opacity: .25;
-    color: white;
+    color: #555;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 }
 .slick-dots li.slick-active button:before {
     opacity: .75;
-    color: white;
+    color: #555;
 }
 @media screen and (max-width: 1150px){
     button.slick-arrow {
