@@ -247,7 +247,7 @@
 
                   <?php
                   }
-                  elseif ((stristr($thePage,"free-estimate")) || ($isCityPage == true))
+                  elseif ((stristr($thePage,"free-estimate")) || ($isCityPage == true) || ($thePage, "service-area"))
                   {
                   ?>
                   <div class="container" id="page-wrap">
@@ -398,7 +398,8 @@
                       </div>
                   </div>
 
-                  <?php if (($thePage != "free-estimate")&&($thePage != "index")) { ?>
+                  <?php if (($thePage != "index") && ($thePage != "service-area") && ($isCityPage == 0) && ($thePage != "free-estimate"))
+                  { ?>
                       </div><!-- end #silo-page-wrap -->
                   <?php
                           }
