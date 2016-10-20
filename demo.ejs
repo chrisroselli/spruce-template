@@ -392,9 +392,15 @@
                               ?>
                               [[content]]
                           </div>
+                <?php if (($thePage != "index") && ($thePage != "service-area") && ($isCityPage == 0) && ($thePage != "free-estimate"))
+                  { ?>
                           <div class="medium-3 medium-pull-9 columns" id="subnav-left">
                               [[single_silo_nav]]
                           </div>
+                  <?php
+                  }
+                  ?>
+                  
                       </div>
                   </div>
 
