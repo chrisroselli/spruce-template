@@ -106,6 +106,9 @@ strong {
     background: #fff;
     padding: 20px 0px;
 }
+#logo img {
+    max-height: 150px;
+}
 #contact {
     position: relative;
 }
@@ -124,7 +127,6 @@ strong {
     top: 50%;
     
 }
-
 #header-btn a.button {
     text-transform: none;
     border-radius: 30px;
