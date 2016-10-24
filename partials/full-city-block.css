@@ -4,7 +4,7 @@
     position: relative;
     height: 450px;
     overflow: hidden;
-    border-top: 5px solid #666;
+    border-top: 5px solid rgb(180,180,180);
     box-sizing: content-box;
 }
 
@@ -38,7 +38,7 @@
 }
 #home-city-list {
     height: 450px;
-    background: #666;
+    background: rgb(180,180,180);
     position: relative;
     padding: 20px 30px;
     box-sizing: border-box;
@@ -102,7 +102,7 @@
     width: 50%;
     padding: 12px 0;
     margin: 0;
-    border-bottom: 1px solid rgba(200,200,200,.25);
+    border-bottom: 1px solid rgba(100,100,100,.2);
 }
 
 .city_scroll_list_local_phone {
