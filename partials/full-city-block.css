@@ -4,7 +4,7 @@
     position: relative;
     height: 450px;
     overflow: hidden;
-    border-top: 5px solid <%= primaryBrightColor %>;
+    border-top: 5px solid #666;
     box-sizing: content-box;
 }
 
@@ -38,7 +38,7 @@
 }
 #home-city-list {
     height: 450px;
-    background: <%= primaryBrightColor %>;
+    background: #666;
     position: relative;
     padding: 20px 30px;
     box-sizing: border-box;
