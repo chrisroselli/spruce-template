@@ -53,7 +53,7 @@
     content: "";
     display: block;
     height: 50px;
-    width: 100%;
+    width: 93%;
     background: linear-gradient(to top,rgba(180,180,180,1),rgba(180,180,180,0)); /*creates the fade at bottom of city list */
     top: 200px;
     position: absolute;
