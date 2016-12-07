@@ -130,7 +130,7 @@ strong {
 #header-btn a.button {
     text-transform: none;
     border-radius: 30px;
-    padding: 5px 15px;
+    padding: 10px 20px;
     margin: 10px auto 0px;
     line-height: 100%;
     font-weight: 400;
@@ -159,7 +159,7 @@ strong {
 }
 .opensign {
     float: left;
-    background: #d50208;
+    background: <%= primaryBrightColor %>;
     border-radius: 7px;
     padding: 5px;
     margin: -5px 10px 0px 0px;
@@ -284,8 +284,8 @@ ul#top-nav-list ul.m-menu ul a:hover {
 /* Top Banner Sticky Phone # and Button*/
 #phone-sticky a.phone_link span,
 #phone-sticky a.phone_link:hover span {
+	color: <%= primaryBrightColor %>;
 }
-
 #phone-sticky a.button {
     background: <%= primaryBrightColor %>;
 }
