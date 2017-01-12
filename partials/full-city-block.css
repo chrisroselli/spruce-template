@@ -19,7 +19,7 @@
 #service-area p.more-assets {
     left: 0;
     z-index: 1;
-    bottom: -30px;
+    bottom: -20px;
     position: absolute;
 }
 #service-area p.more-assets a {
