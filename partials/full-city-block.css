@@ -40,7 +40,6 @@
     position: relative;
     padding: 20px 20px;
     box-sizing: border-box;
-    pointer-events: visible;
 }
 
 .city_scroll_list_container {
@@ -121,9 +120,6 @@
     }
     #service-area #home-city-list-wrap {
         position: relative;
-    }
-    #home-city-list {
-        pointer-events: none;
     }
 }
 @media screen and (min-width: 641px) and (max-width: 1024px){
