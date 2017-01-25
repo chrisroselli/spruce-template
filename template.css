@@ -696,83 +696,9 @@ button.slick-next {
     background-size: cover;
     padding: 60px 0px;
 }
-
-#customers #home-reviews {
-    padding-bottom: 20px;
-    margin-bottom: 20px;
-}
-#customers .review_item {
-    margin: 0px 0px 20px 0px;
-    box-shadow: 0px 0px 5px rgba(0, 0, 0, .2);
-    border-radius: 3px;
-    padding: 20px;
-    height: auto;
-    background-color: #fff;
-}
-@media screen and (min-width: 1025px) {
-    #customers .review_item {
-        height: 165px;
-    }
-}
-#customers .review_item .review_item_details {
-    font-size: 14px;
-    overflow: auto;
-    margin: 0px 0px 5px !important;
-    color: #8e8e8e;
-    float: none;
-    width: auto;
-    text-align: center;
-}
-#customers .small_review_stars_grouping {
-    overflow: auto;
-    margin: 0px auto;
-    width: auto;
-}
-#customers .review_item .wt-5587-starrfull {
-    background-image: url('/core/images/icons/star-filled-small-review.png');
-    width: 16px;
-    height: 16px;
-    margin: 0px 2px 0px 0px;
-    display: inline-block;
-}
-#customers .review_item .wt-5587-starrhalf {
-    background-image: url('/core/images/icons/star-half-small-review.png');
-    width: 16px;
-    height: 16px;
-    display: inline-block;
-}
-#customers .wt-5587-starr.wt-5587-starrempty {
-    background: url('/core/images/icons/star-empty-small-review.png');
-    width: 16px;
-    height: 16px;
-    display: inline-block;
-}
-#customers .review_item .review_customer {
-    padding-right: 5px;
-    margin: 0;
-    display: inline-block;
-}
-#customers .review_customer::after {
-    content: "from";
-    padding-left: 5px;
-}
-#customers .review_item .review_location_date {
-    display: inline-block;
-    margin: 0;
-}
-#customers .review_item .review_preview {
-    color: #359E6F;
-    font-size: 20px;
-    line-height: 1.2em;
-    font-style: italic;
-    padding: 0px;
-    overflow: hidden;
-    text-align: center;
-}
 #customers .review_item .review_preview a {
     color: <%= primaryDarkColor %>;
 }
-
 
 /***-------------------------------------- Homepage Features ------------------------------------------------***/
 #hp-features {
