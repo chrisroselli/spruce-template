@@ -282,6 +282,10 @@ ul#top-nav-list ul.m-menu ul a:hover {
 }
 
 /* Top Banner Sticky Phone # and Button*/
+.phone_link {
+  font-size: 26px;
+  font-weight: bold;
+}
 #phone-sticky a.phone_link span,
 #phone-sticky a.phone_link:hover span {
 	color: <%= primaryBrightColor %>;
