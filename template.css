@@ -353,6 +353,7 @@ ul#top-nav-list ul.m-menu ul a:hover {
   color: #fff;
 }
 .cta-button {
+  display: inline-block;
   background-color: <%= primaryBrightColor %>;
   text-transform: uppercase;
   padding: 1rem 2rem 1.0625rem 2rem;
