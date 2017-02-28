@@ -571,14 +571,6 @@ p.more-assets a:hover {
 
  <%- fCity %>
 
-/***------------------------------------------- Cred Bar -------------------------------------------***/
-
-#cred {
-    box-sizing: border-box;
-    background: url('/core/images/templates/health/cred-bg.png') #666 no-repeat center top;
-    padding: 60px 0px 50px;
-}
-
 /***------------------------ Homepage content Media Queries --------------------------***/
 
 @media screen and (min-width: 1025px) {
