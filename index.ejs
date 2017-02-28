@@ -431,5 +431,33 @@
 
  [[custom_core_v3_js]]
  
+ <?php if (($thePage == "index")) { ?>
+
+    <script>
+        $('#inline-affil-slider > .columns').slick({
+            autoplay: true,
+            arrows: true,
+            infinite: true,
+            speed: 1000,
+            cssEase: 'ease',
+            slidesToShow: 3,
+            slidesToScroll: 3,
+            responsive: [
+                {
+                breakpoint: 640,
+                settings: {
+                    speed: 500,
+                    slidesToShow: 1,
+                    slidesToScroll: 1
+                }
+                }
+            ]
+            });
+     </script>
+
+<?php
+}
+?>
+ 
     </body>
 </html>
