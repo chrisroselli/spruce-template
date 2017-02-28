@@ -534,167 +534,13 @@ p.more-assets a:hover {
     text-decoration: underline;
 }
 
-#widget-slider .widget-item h3,
-#widget-slider .widget-item p {
-    margin: 20px 15px 0px;
-    display: inline-block;
-}
-#widget-slider .widget-item .widget-img {
-    height: 375px;
-    position: relative;
-    margin: 10px auto;
-    background: rgba(0, 0, 0, 0.3);
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, .35);
-}
-#widget-slider .widget-item .widget-img img {
-    display: block;
-    margin: 0px auto;
-    position: absolute;
-    max-width: 500px;
-    max-height: 375px;
-    -webkit-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
-    top: 50%;
-    left: 50%;
-}
 #widget-slider .widget-item .widget-img span {
-    position: absolute;
-    z-index: 1;
-    color: #fff;
+    color: #fff !important;
     font: bold 20px/20px sans-serif;
-    background: <%= primaryDarkColor %>;
-    box-shadow: 2px 2px 10px rgba(0, 0, 0, .25);
-    padding: 10px 15px;
-    top: -10px;
-    left: -10px;
-    overflow: visible;
+    background: <%= primaryDarkColor %> !important;
 }
 #widget-slider .widget-item .widget-img span::after {
-    content: "";
-    display: block;
-    border-bottom: 10px solid transparent;
-    border-right: 10px solid #222;
-    position: absolute;
-    left: 0;
-    bottom: -10px;
-}
-/* Slider arrow styles */
-
-button.slick-arrow {
-    background: transparent;
-    height: 50px;
-    width: 50px;
-    border-color: rgba(150, 150, 150, .5);
-    border-style: solid;
-    padding: 0px;
-    position: absolute;
-    z-index: 10;
-    -webkit-transform: translateY(-50%) rotate(45deg);
-    transform: translateY(-50%) rotate(45deg);
-    top: 35%;
-    transition: border-color .2s ease;
-    font-size: 0;
-    outline: none;
-}
-button.slick-arrow:hover {
-    border-color: rgba(150, 150, 150, .85);
-}
-button.slick-prev {
-    left: -30px;
-    border-width: 0px 0px 2px 2px;
-}
-button.slick-next {
-    right: -30px;
-    border-width: 2px 2px 0px 0px;
-}
-/*** Slick Slider Dots ***/
-/* Dots */
-
-.slick-slider {
-    margin-bottom: 30px;
-    padding-bottom: 30px;
-}
-.slick-dots {
-    position: absolute;
-    bottom: 15px;
-    margin: 0px;
-    display: block;
-    width: 100%;
-    padding: 0;
-    list-style: none;
-    text-align: center;
-}
-.slick-dots li {
-    position: relative;
-    display: inline-block;
-    width: 20px;
-    height: 20px;
-    margin: 0 5px;
-    padding: 0;
-    cursor: pointer;
-}
-.slick-dots li button {
-    font-size: 0;
-    line-height: 0;
-    display: block;
-    width: 20px;
-    height: 20px;
-    padding: 5px;
-    cursor: pointer;
-    color: transparent;
-    border: 0;
-    outline: none;
-    background: transparent;
-}
-.slick-dots li button:hover,
-.slick-dots li button:focus {
-    outline: none;
-}
-.slick-dots li button:hover:before,
-.slick-dots li button:focus:before {
-    opacity: 1;
-}
-.slick-dots li button:before {
-    font-family: sans-serif;
-    font-size: 60px;
-    line-height: 20px;
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 20px;
-    height: 20px;
-    content: '\2022';
-    text-align: center;
-    opacity: .25;
-    color: #555;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-}
-.slick-dots li.slick-active button:before {
-    opacity: .75;
-    color: #555;
-}
-@media screen and (max-width: 1150px){
-    button.slick-arrow {
-        top: 25%;
-        height: 30px;
-        width: 30px;
-    }
-    button.slick-prev {
-        left: 40px;
-    }
-    button.slick-next {
-        right: 40px;
-    }
-}
-@media screen and (max-width: 1024px){
-    #widget-slider .widget-item .widget-img {
-        height: 200px;
-    }
-    #widget-slider .widget-item .widget-img img {
-        max-width: 300px;
-        max-height: 200px;
-    }
+    border-right: 10px solid <%= primaryDarkColor %>;
 }
 
 /***------------------------------------------- Homepage Customer Reviews -------------------------------------------***/
@@ -720,6 +566,7 @@ button.slick-next {
     margin: 10px auto;
 }
 
+/***-------------------------------------- Homepage Service Area --------------------------------------------***/
 
  <%- fCity %>
 
@@ -745,27 +592,6 @@ button.slick-next {
     top: 50%;
     left: 50%;
 }
-#cred img,
-.grayscale {
-    /* For IE 6 - 9 */
-    filter: gray;
-    
-    /* Firefox 10+, Firefox on Android */
-    filter: url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'grayscale\'><feColorMatrix type=\'matrix\' values=\'0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0\'/></filter></svg>#grayscale");
-    
-    /* For Webkit browsers */
-    -webkit-filter: grayscale(100%);
-    filter: grayscale(100%);
-    
-}
-/* Color Version */
-
-.grayscale:hover {
-    filter: url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'grayscale\'><feColorMatrix type=\'matrix\' values=\'1 0 0 0 0, 0 1 0 0 0, 0 0 1 0 0, 0 0 0 1 0\'/></filter></svg>#grayscale");
-    -webkit-filter: grayscale(0%);
-    filter: grayscale(0%);
-}
-
 
 /***------------------------ Homepage content Media Queries --------------------------***/
 
