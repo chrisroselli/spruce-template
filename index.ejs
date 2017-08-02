@@ -72,35 +72,29 @@
             </div><!-- end #header -->
 
            <!-- SUPER NAV TOOL -->            
-            <?php
+           <?php
                 $superNav = new nav();
-                $superNav->superTemplateId = 3;
                 $superNav->superMode = 'top';
+                $superNav->superSplitAboutWork = true;
                 $superNav->superItems = array(
                     'Services' => array(
                         'target' => 'services'
                     ),
                     'Our Work' => array(
+                        'target' => 'work'
+                    ),
+                    3780 => array(
                         'target' => 'about',
-                        'show_about_link' => false
-                    ),
-                    //Replace With Page ID of Financing Page
-                    12345 => array(
-                        'grandchildren' => false
-                    ),
-                    //Replace with Page ID of Reviews Page
-                    12345 => array(
-                        'grandchildren' => false
+                        'show_about_link' => true
                     ),
                     'Service Area' => array(
                         'target' => 'map',
                     ),
-                    //Replace with Page ID of About Us Page
-                    12345 => array(
-                        'grandchildren' => false
+                    'Free Quote' => array(
+                        'class' => 'quote',
+                        'target' => 'contact'
                     )
                 );
-                
                 echo $superNav->generateSuperMarkup();
                 ?>
         <!-- END SUPER NAV TOOL -->    
