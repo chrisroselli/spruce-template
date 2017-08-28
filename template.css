@@ -174,13 +174,6 @@ strong {
     color: #ffffff;
 }
 @media screen and (min-width: 1025px) {
-    #logo a {
-        display: block;
-        position: absolute;
-        -webkit-transform: translateY(-50%);
-        transform: translateY(-50%);
-        top: 50%;
-    }
     #phone {
         text-align: right;
         height: 55px;
