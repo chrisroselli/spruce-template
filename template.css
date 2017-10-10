@@ -399,11 +399,11 @@ ul#top-nav-list ul.m-menu ul a:hover {
     margin: 10px auto;
     color: <%= primaryBrightColor %>;
 }
-.service-items a img {
+.service-item a img {
     border: solid 4px #fefefe;
     transition: box-shadow 200ms ease-out;
 }
-.service-items a img:hover {
+.service-item a img:hover {
     box-shadow: 0 0px 0px 5px <%= primaryBrightColor %>;
 }
 @media screen and (max-width: 640px){
